@@ -41,7 +41,6 @@ public class Lu {
         X3 = Y3;
         X2 = Y2 - U[1][2] * X3;
         X1 = Y1 - U[0][1] * X2 - U[0][2] * X3;
-        System.out.println("El resultado es:\nx0= " + X1 + " \nx1= " + X2 + " \nx2= " + X3);
 
         results[0] = String.valueOf(X1);
         results[1] = String.valueOf(X2);

@@ -36,17 +36,8 @@ public class Matrix_UI extends javax.swing.JFrame {
     }
 
     private void myConfig() {
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-
-        // Rezising the img
-        ImageIcon icon = new ImageIcon("src/main/java/images/CUNOC_logo.png");
-        this.cunoc_logo.setOpaque(true);
-        this.cunoc_logo.setIcon(new ImageIcon(icon.getImage().getScaledInstance(130, 130, Image.SCALE_SMOOTH)));
-        this.cunoc_logo.setBackground(null);
-
         try {
-            UIManager.setLookAndFeel("com.jtattoo.plaf.graphite.GraphiteLookAndFeel");
+            UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Matrix_UI.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -56,6 +47,19 @@ public class Matrix_UI extends javax.swing.JFrame {
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(Matrix_UI.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        //window config
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setLocationRelativeTo(null);
+        this.setTitle("Matrix Calcultaor 3x3");
+        
+        
+        // Rezising the img
+        ImageIcon icon = new ImageIcon("src/main/java/images/CUNOC_logo.png");
+        this.cunoc_logo.setOpaque(true);
+        this.cunoc_logo.setIcon(new ImageIcon(icon.getImage().getScaledInstance(130, 130, Image.SCALE_SMOOTH)));
+        this.cunoc_logo.setBackground(null);
+
     }
 
     /**
@@ -65,7 +69,7 @@ public class Matrix_UI extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         container = new javax.swing.JPanel();
@@ -84,7 +88,6 @@ public class Matrix_UI extends javax.swing.JFrame {
         Left_panel = new javax.swing.JPanel();
         regresion = new javax.swing.JButton();
         lu_method_button = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         Main_panel = new javax.swing.JPanel();
         a00_cell = new javax.swing.JTextField();
         a01_cell = new javax.swing.JTextField();
@@ -105,7 +108,7 @@ public class Matrix_UI extends javax.swing.JFrame {
         container.setVerifyInputWhenFocusTarget(false);
         container.setLayout(new java.awt.BorderLayout());
 
-        Header_panel.setBackground(new java.awt.Color(255, 255, 255));
+        Header_panel.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setText("Daniel Eduardo Bautista Fuentes");
 
@@ -113,75 +116,86 @@ public class Matrix_UI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout Header_panelLayout = new javax.swing.GroupLayout(Header_panel);
         Header_panel.setLayout(Header_panelLayout);
-        Header_panelLayout.setHorizontalGroup(Header_panelLayout
-                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header_panelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2).addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 639, Short.MAX_VALUE)
-                        .addComponent(cunoc_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 130,
-                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap()));
-        Header_panelLayout.setVerticalGroup(Header_panelLayout
-                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Header_panelLayout.createSequentialGroup().addContainerGap()
-                        .addGroup(Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(Header_panelLayout.createSequentialGroup()
-                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel2).addGap(0, 68, Short.MAX_VALUE))
-                                .addComponent(cunoc_logo, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap()));
+        Header_panelLayout.setHorizontalGroup(
+            Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Header_panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 569, Short.MAX_VALUE)
+                .addComponent(cunoc_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        Header_panelLayout.setVerticalGroup(
+            Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Header_panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Header_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Header_panelLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel2)
+                        .addGap(0, 48, Short.MAX_VALUE))
+                    .addComponent(cunoc_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
 
         container.add(Header_panel, java.awt.BorderLayout.PAGE_START);
 
-        Footer_panel.setBackground(new java.awt.Color(255, 255, 255));
+        Footer_panel.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel3.setText("Resultados");
 
-        results_table.setModel(new javax.swing.table.DefaultTableModel(new Object[][] { { null, null, null } },
-                new String[] { "Valor 1", "Valor 2", "Valor 3" }) {
-            /**
-             *
-             */
-            private static final long serialVersionUID = 1L;
-            Class[] types = new Class[] { java.lang.Long.class, java.lang.Object.class, java.lang.Object.class };
+        results_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null}
+            },
+            new String [] {
+                "Valor 1", "Valor 2", "Valor 3"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Long.class, java.lang.Object.class, java.lang.Object.class
+            };
 
             public Class getColumnClass(int columnIndex) {
-                return types[columnIndex];
+                return types [columnIndex];
             }
         });
         jScrollPane1.setViewportView(results_table);
 
         javax.swing.GroupLayout Footer_panelLayout = new javax.swing.GroupLayout(Footer_panel);
         Footer_panel.setLayout(Footer_panelLayout);
-        Footer_panelLayout.setHorizontalGroup(Footer_panelLayout
-                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(Footer_panelLayout.createSequentialGroup().addContainerGap().addGroup(Footer_panelLayout
-                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 936, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Footer_panelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE).addComponent(jLabel3).addGap(351, 351, 351)))
-                        .addContainerGap()));
-        Footer_panelLayout
-                .setVerticalGroup(
-                        Footer_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
-                                Footer_panelLayout.createSequentialGroup().addGap(6, 6, 6).addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45,
-                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addContainerGap(24, Short.MAX_VALUE)));
+        Footer_panelLayout.setHorizontalGroup(
+            Footer_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Footer_panelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Footer_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 944, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Footer_panelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(351, 351, 351)))
+                .addContainerGap())
+        );
+        Footer_panelLayout.setVerticalGroup(
+            Footer_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Footer_panelLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
 
         container.add(Footer_panel, java.awt.BorderLayout.PAGE_END);
 
-        right_panel.setBackground(new java.awt.Color(255, 255, 255));
+        right_panel.setBackground(new java.awt.Color(102, 102, 102));
         right_panel.setLayout(new java.awt.GridLayout(3, 1));
 
         gauss_resolve_butotn.setText("gauss");
+        gauss_resolve_butotn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 0), new java.awt.Color(255, 0, 51), new java.awt.Color(153, 0, 0), new java.awt.Color(0, 51, 204)));
         gauss_resolve_butotn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gauss_resolve_butotnActionPerformed(evt);
@@ -190,6 +204,7 @@ public class Matrix_UI extends javax.swing.JFrame {
         right_panel.add(gauss_resolve_butotn);
 
         gauss_jordan_button.setText("Gauss J");
+        gauss_jordan_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 0), new java.awt.Color(255, 0, 51), new java.awt.Color(153, 0, 0), new java.awt.Color(0, 51, 204)));
         gauss_jordan_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gauss_jordan_buttonActionPerformed(evt);
@@ -198,6 +213,7 @@ public class Matrix_UI extends javax.swing.JFrame {
         right_panel.add(gauss_jordan_button);
 
         gauss_seidel_button.setText("Seidel");
+        gauss_seidel_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 0), new java.awt.Color(255, 0, 51), new java.awt.Color(153, 0, 0), new java.awt.Color(0, 51, 204)));
         gauss_seidel_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gauss_seidel_buttonActionPerformed(evt);
@@ -207,10 +223,11 @@ public class Matrix_UI extends javax.swing.JFrame {
 
         container.add(right_panel, java.awt.BorderLayout.LINE_END);
 
-        Left_panel.setBackground(new java.awt.Color(255, 255, 255));
+        Left_panel.setBackground(new java.awt.Color(102, 102, 102));
         Left_panel.setLayout(new java.awt.GridLayout(2, 1));
 
         regresion.setText("regresica");
+        regresion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 0), new java.awt.Color(255, 0, 51), new java.awt.Color(153, 0, 0), new java.awt.Color(0, 51, 204)));
         regresion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresionActionPerformed(evt);
@@ -219,6 +236,7 @@ public class Matrix_UI extends javax.swing.JFrame {
         Left_panel.add(regresion);
 
         lu_method_button.setText("Lu");
+        lu_method_button.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(153, 153, 0), new java.awt.Color(255, 0, 51), new java.awt.Color(153, 0, 0), new java.awt.Color(0, 51, 204)));
         lu_method_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lu_method_buttonActionPerformed(evt);
@@ -227,39 +245,58 @@ public class Matrix_UI extends javax.swing.JFrame {
         Left_panel.add(lu_method_button);
 
         container.add(Left_panel, java.awt.BorderLayout.LINE_START);
-        container.add(jSeparator1, java.awt.BorderLayout.CENTER);
 
-        Main_panel.setBackground(new java.awt.Color(255, 255, 255));
+        Main_panel.setBackground(new java.awt.Color(102, 102, 102));
+        Main_panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(0, 255, 255), java.awt.Color.white, new java.awt.Color(51, 204, 0), new java.awt.Color(255, 204, 204)));
+        Main_panel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Main_panel.setLayout(new java.awt.GridLayout(3, 3, 5, 5));
 
+        a00_cell.setBackground(new java.awt.Color(51, 51, 51));
         a00_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a00_cell.setForeground(new java.awt.Color(255, 255, 255));
         a00_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a00_cell.setText("0");
+        a00_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a00_cell);
 
+        a01_cell.setBackground(new java.awt.Color(51, 51, 51));
         a01_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a01_cell.setForeground(new java.awt.Color(255, 255, 255));
         a01_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a01_cell.setText("0");
+        a01_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a01_cell);
 
+        a02_cell.setBackground(new java.awt.Color(51, 51, 51));
         a02_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a02_cell.setForeground(new java.awt.Color(255, 255, 255));
         a02_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a02_cell.setText("0");
+        a02_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a02_cell);
 
+        r0_cell.setBackground(new java.awt.Color(0, 0, 0));
         r0_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        r0_cell.setForeground(new java.awt.Color(255, 255, 255));
         r0_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         r0_cell.setText("0");
+        r0_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(r0_cell);
 
+        a10_cell.setBackground(new java.awt.Color(51, 51, 51));
         a10_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a10_cell.setForeground(new java.awt.Color(255, 255, 255));
         a10_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a10_cell.setText("0");
+        a10_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a10_cell);
 
+        a11_cell.setBackground(new java.awt.Color(51, 51, 51));
         a11_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a11_cell.setForeground(new java.awt.Color(255, 255, 255));
         a11_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a11_cell.setText("0");
+        a11_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         a11_cell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 a11_cellActionPerformed(evt);
@@ -267,34 +304,52 @@ public class Matrix_UI extends javax.swing.JFrame {
         });
         Main_panel.add(a11_cell);
 
+        a12_cell.setBackground(new java.awt.Color(51, 51, 51));
         a12_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a12_cell.setForeground(new java.awt.Color(255, 255, 255));
         a12_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a12_cell.setText("0");
+        a12_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a12_cell);
 
+        r1_cell.setBackground(new java.awt.Color(0, 0, 0));
         r1_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        r1_cell.setForeground(new java.awt.Color(255, 255, 255));
         r1_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         r1_cell.setText("0");
+        r1_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(r1_cell);
 
+        a20_cell.setBackground(new java.awt.Color(51, 51, 51));
         a20_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a20_cell.setForeground(new java.awt.Color(255, 255, 255));
         a20_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a20_cell.setText("0");
+        a20_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a20_cell);
 
+        a21_cell.setBackground(new java.awt.Color(51, 51, 51));
         a21_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a21_cell.setForeground(new java.awt.Color(255, 255, 255));
         a21_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a21_cell.setText("0");
+        a21_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a21_cell);
 
+        a22_cell.setBackground(new java.awt.Color(51, 51, 51));
         a22_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        a22_cell.setForeground(new java.awt.Color(255, 255, 255));
         a22_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         a22_cell.setText("0");
+        a22_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(a22_cell);
 
+        r2_cell.setBackground(new java.awt.Color(0, 0, 0));
         r2_cell.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        r2_cell.setForeground(new java.awt.Color(255, 255, 255));
         r2_cell.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         r2_cell.setText("0");
+        r2_cell.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(204, 0, 51), new java.awt.Color(255, 102, 0), new java.awt.Color(102, 0, 102), new java.awt.Color(0, 204, 204)));
         Main_panel.add(r2_cell);
 
         container.add(Main_panel, java.awt.BorderLayout.CENTER);
@@ -302,10 +357,13 @@ public class Matrix_UI extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(container,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE));
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(container, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -368,7 +426,6 @@ public class Matrix_UI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JButton lu_method_button;
     private javax.swing.JTextField r0_cell;
     private javax.swing.JTextField r1_cell;

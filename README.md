@@ -1,5 +1,5 @@
 # matrix-solver
-5 ways to solve a 3x3 math sistem ecuacion in a java app
+5 ways to solve a 3x3 math system ecuacion in a java app
 
 I am looking to recreate solutions for 3x3 matrices using numerical methods, 
 this program is made for math work 
